@@ -1,0 +1,398 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+
+
+.pink-navbar {
+  height: 137px;
+  width: 100%;
+  background-color: #FAE9F2;
+  position: relative;
+  border-bottom: 2px solid #020202;
+  
+}
+
+/* 导航栏 */
+.page-nav {
+  position: absolute;
+  right: 100px;
+  bottom: 32px;
+  display: flex;
+  gap: 56px;
+  font-family: 'Times New Roman', serif;
+  font-size: 24px;
+}
+
+.page-nav a {
+  color: #020202;
+  text-decoration: none;
+  position: relative;
+}
+
+/* 当前激活项加下划线 */
+.page-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #020202;
+}
+
+/* CSS */
+.works-box {
+  background-color: #FAE9F2;
+  border: 2px solid #020202;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 64px 100px;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-group {
+  display: flex;
+  align-items: flex-end; /* 底部对齐 */
+  gap: 8px;
+}
+
+.main-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 72px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.sub-title {
+  font-size: 24px;
+  margin: 10px;
+  line-height: 1;
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.image-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.image-section img {
+  width: 68px;
+  height: 55px;
+  object-fit: contain;
+}
+
+
+/* 黑色直线 */
+.divider-line {
+  width: calc(100% - 200px); /* 与左右 padding 相同：100px * 2 */
+  height: 2px;
+  background-color: #020202;
+  margin: 64px auto 0 auto; /* 上间距 64px，水平居中 */
+}
+
+.category-tags {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 200px);
+  margin: 32px auto 0 auto;
+}
+
+/* a 标签代替 div */
+.tag {
+  flex: 1;
+  margin: 0 8px;
+  text-align: center;
+  padding: 12px 0;
+  border: 2px solid #020202;
+  background-color: #FAE9F2;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #020202;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* span 内文字可放大 */
+.tag span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* ✅ 只有不是 active 的标签才启用放大 */
+.tag:not(.active):hover span {
+  transform: scale(1.2);
+}
+
+/* ✅ 点击状态（不放大，只变白） */
+.tag.active {
+  background-color: #FFFFFF;
+}
+
+.tag:first-child { margin-left: 0; }
+.tag:last-child { margin-right: 0; }
+
+.tag.active {
+  background-color: #FFFFFF;
+}
+
+
+
+/* 网格容器：10个作品、2列布局 */
+.works-grid {
+  width: calc(100% - 200px);
+  margin: 64px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 始终保持两列 */
+  gap: 64px;
+}
+
+@media (max-width: 960px) {
+  .works-grid {
+    grid-template-columns: 1fr; /* 960px 以下变成一列 */
+  }
+}
+
+
+/* 每个作品项 */
+.work-item {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* 粉色方框 */
+.work-box {
+  background-color: #FAE9F2;
+  border: 2px solid #020202;
+  aspect-ratio: 591 / 411;
+  padding: 32px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+/* 图片样式 */
+.work-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* hover 时改变背景色 */
+.work-item:hover .work-box {
+  background-color: #FFFFFF;
+}
+
+/* 文字区 */
+/* 包裹层：让内容整体居中对齐 */
+.work-info-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* 内容本体仍保持横向排列 */
+.work-info {
+  display: inline-flex;
+  align-items: center;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 年份块 */
+.work-year {
+  background-color: #FFFFFF;
+  border: 2px solid #020202;
+  padding: 4px 12px;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+
+/* 标题 */
+.work-title {
+  color: #020202;
+}
+
+.work-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.work-box:hover img {
+  transform: scale(1.06); /* 放大 5% */
+}
+
+
+
+
+.works-footer {
+  background-color: #FAE9F2;
+  padding-bottom: 360px;
+  text-align: center;
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.email-box {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 220px;
+}
+
+.email-inner {
+  width: 100%;
+  padding-left: 20.125vw;   /* 322 ÷ 1600 = 20.125% */
+  padding-right: 17.1875vw; /* 275 ÷ 1600 = 17.1875% */
+  box-sizing: border-box;
+}
+
+.email-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-container {
+  position: relative;
+  width: 100%;
+  height: 60px; /* 可根据需要调整总高度 */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 左下角社交图标 */
+.social-icons {
+  position: absolute;
+  left: 60px;
+  bottom: -300px;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 24px;
+}
+
+/* 右下角返回顶部按钮 */
+.back-to-top {
+  position: absolute;
+  right: 60px;
+  bottom: -300px;
+  width: 131px;
+  height: 47px;
+  background-color: #FFFFFF;
+  border: 2px solid #020202;
+  border-radius: 50%;
+
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  letter-spacing: 0.12em; /* 12% */
+  color: #020202;
+  text-align: center;
+  text-decoration: none;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+
+.contact-crossing-banner {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+}
+
+.contact-banner {
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* 居中导航 */
+.footer-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 56px;
+  font-size: 24px;
+  bottom: -200px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-nav a {
+  color: #020202;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  transition: 0.4s ease;
+}
+
+/* 当前激活页面的链接样式 */
+.footer-nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+
+/* 居中版权 */
+.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  bottom: -330px;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.16em; /* 16% */
+}
+
+
+
+
+@font-face {
+  font-family: 'Times New Roman';
+  src: url('assets1/fonts/TimesNewRoman.woff2') format('woff2'),
+       url('assets1/fonts/TimesNewRoman.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+

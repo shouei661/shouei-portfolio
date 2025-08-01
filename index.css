@@ -1,0 +1,995 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.hero {
+   width: 100%;
+   background: #fae9f2;
+   height: 100vh;
+   position: relative;
+   font-family: 'Times New Roman', serif;
+   font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Times New Roman';
+  src: url('assets1/fonts/TimesNewRoman.woff2') format('woff2'),
+       url('assets1/fonts/TimesNewRoman.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+
+.hero-header{
+   width: 100%;
+   display: flex;
+   margin:auto;
+   padding-top: 60px;
+   align-items: top;
+   justify-content: space-between;
+   position: relative;
+}
+
+.logo {
+   font-size: 32px;
+   font-family: 'Times New Roman', serif;
+   cursor: pointer;
+   padding-left: 100px;
+}
+
+.job-title {
+    font-size: 32px;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+
+ul {
+    padding-right: 100px;
+    text-align: right;
+}
+
+ul li{
+    list-style-type: none;
+    padding-bottom: 32px;
+}
+
+ul li a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #020202;
+}
+
+ul li a:hover{
+    text-decoration: underline #020202;
+    text-underline-offset: 8px;
+    transition:0.3s ease-in-out;
+}
+
+
+.welcome-text{
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    margin-left: 100px;
+    margin-top: 400px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+
+.hero-main-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1043px;
+  height: auto;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+.hero-main-image img {
+  width: 100%;
+  height: auto;
+  display: block; 
+}
+
+
+.hero-footer {
+   display: flex;
+   position: absolute;
+   bottom: 40px;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+
+.tags {
+  font-size: clamp(16px, 2vw, 28px);
+  padding-left: 100px;
+}
+
+
+
+.enter-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(14px, 2vw, 24px);
+  color: #020202;
+  pointer-events: none;
+}
+
+.welcome-gif img {
+  width: clamp(60px, 10vw, 120px);
+  height: auto;
+  padding-right: 100px;
+}
+
+
+
+
+.text-banner {
+  height: 50px;
+  background-color: #FAE9F2;
+  border-top: 2px solid #020202;
+  border-bottom: 2px solid #020202;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  padding: 0 0; /* 若有左右留白可加 */
+  box-sizing: border-box;
+}
+
+.scroll-wrapper {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+  will-change: transform;
+  border: 2px #FAE9F2;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 24px;
+  white-space: nowrap;
+  align-items: center;
+  padding: 12px;
+}
+
+.text {
+  font-size: 24px;
+  color: #020202;
+  line-height: 1;
+}
+
+.banner-star {
+  
+  width: 15px;
+  height: 15px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+/* 滚动动画 */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ellipse-box-container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: flex-start; /* ✅ 左对齐 */
+  margin: 0 auto;
+}
+
+.ellipse-box {
+  width: 563px;
+  height: 129px;
+  margin-top: 156px;
+  background-color: #FAE9F2;
+  border: 2px solid #020202;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ✅ 中间内容居中 */
+  padding: 0 72px; /* 给星星留出空间 */
+}
+
+.label-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  transform: translateY(4px);
+  z-index: 1; /* ✅ 保证在星星之上 */
+  text-align: center;
+}
+
+
+@font-face {
+  font-family: 'Pinyon Script';
+  src: url('assets1/fonts/PinyonScript.woff2') format('woff2'),
+       url('assets1/fonts/PinyonScript.woff') format('woff');
+ 
+}
+
+/* 字体样式 */
+.english {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 112px;
+  line-height: 0.8;
+  color: #020202;
+  position: relative;
+  top: 8px;
+}
+
+.japanese {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  color: #020202;
+  position: relative;
+  top: 16px;
+}
+
+
+/* 星星位置固定在容器边缘 */
+.about-star.left {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+}
+
+.about-star.right {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+}
+
+
+
+
+
+.about-section {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.about-inner {
+ display: flex;
+  justify-content: space-between; /* ✅ 消除右侧多余空隙 */
+  gap: 156px; 
+}
+
+/* 左边文字区域 */
+.about-text {
+  flex: 1 1 480px;
+  min-width: 300px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 右边图片区域 */
+.about-photo {
+  flex: 0 0 352px;
+}
+
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 352 / 432; /* 保持比例 */
+  background-color: #FAE9F2;
+  border: 2px solid #020202;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 缩小图片，使其比容器小一圈 */
+.photo-placeholder img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #020202;
+}
+
+
+/* 名字排版 */
+.name-line {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.jp-name, .en-name {
+  font-size: 28px;
+  color: #020202;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.en-name {
+  font-family: 'Roboto', cursive;
+  line-height: 1.1;
+}
+
+/* 介绍段落 */
+.introduction {
+  font-size: 20px;
+  line-height: 36px;
+  color: #020202;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin-bottom: 64px;
+  text-align: justify;
+}
+
+/* 按钮 */
+.view-more {
+  width: 190px;
+  height: 50px;
+  background-color: #FAE9F2;
+  color: #020202;
+  border: 2px solid #020202;
+  font-family: 'Roboto';
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.view-more:hover {
+  background-color: #FFFFFF;
+}
+
+
+.about-banner {
+  margin-top: 20px;
+  height: 400px;
+  object-fit: cover;  /* 防止图片变形 */
+  width: 100vw;  
+}
+
+
+.works-ellipse-box {
+  width: 563px;
+  height: 140px;
+  margin: 60px auto 0; /* 顶部 156，左右自动居中 */
+  background-color: #FAE9F2;
+  border: 2px solid #020202;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 星星样式，稍微靠内一点 */
+.works-star {
+  position: absolute;
+  width: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.works-star.left {
+  left: 56px; /* 原本更近，向外一点点 */
+}
+
+.works-star.right {
+  right: 56px;
+}
+
+
+
+/* 垂直排列 label */
+.label-wrapper.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+/* Works 字样，保持你原本大小 */
+.english {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 112px;
+  line-height: 0.5;
+  color: #020202;
+  display: inline-block;
+  position: relative;
+  
+}
+
+/* 制作物，也保持原大小 */
+.japanese {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  color: #020202;
+  display: inline-block;
+  position: relative;
+
+}
+
+
+.works-section {
+  margin-top: 136px;
+}
+
+/* 横幅整体 */
+.category-banner {
+  height: 106px;
+  width: 100%;
+  background-color: #FAE9F2;
+  border-bottom: 2px solid #020202;
+  border-top: 2px solid #020202;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 60px;
+}
+
+/* 左侧区域（箭头 + Website） */
+.category-left {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+/* 箭头图标 */
+.category-banner-arrow {
+  width: 50px;
+  height: 50px;
+}
+
+/* Website 字体样式 */
+.category-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 64px;
+  font-style: italic;
+  color: #020202;
+  line-height: 1;
+}
+
+
+
+
+/* 蝴蝶结图标 */
+.category-banner-ribbon {
+  width: 75px;
+  height: 60px;
+}
+
+/* 下方空白区域 */
+.category-space {
+  height: 136px;
+}
+
+
+
+.card-container {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 385px;
+  height: 446px;
+  padding: 40px 12px 12px;
+  border: 2px solid #020202;
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.mockup {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  margin: 80px auto 60px;
+  transition: transform 0.4s ease; /* 平滑动画 */
+}
+
+.card:hover .mockup {
+  transform: scale(1.05); /* 悬浮时放大 5% */
+}
+
+
+.direction-tag {
+  font-size: 14px;
+  border: 2px solid #020202;
+  background-color: #FAE9F2;
+  padding: 4px 10px;
+  font-family: 'Roboto' ,inter;
+
+}
+
+.design-tag {
+  font-size: 14px;
+  border: 2px solid #020202;
+  background-color: #FAE9F2;
+  padding: 4px 18px;
+  font-family: "Roboto", "Inter",sans-serif;
+}
+
+.tag {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  border: 2px solid #020202;
+  background-color: #FAE9F2;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.tags-container {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.work-name-card {
+  width: 385px;
+  padding: 16px;
+  background-color: #FAE9F2;
+  border:2px solid #020202;
+  text-align: center;
+  font-size: 24px;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP",sans-serif;
+}
+
+
+.card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+
+}
+
+
+
+.card-link-cafe {
+  text-decoration: none;     /* 去掉下划线 */
+  color: inherit;            /* 继承文字颜色 */
+  display: inline-block; 
+}
+
+.card-link-hotel {
+  text-decoration: none;     /* 去掉下划线 */
+  color: inherit;            /* 继承文字颜色 */
+  display: inline-block; 
+}
+
+
+
+.card-link-portfolio {
+  text-decoration: none;     /* 去掉下划线 */
+  color: inherit;            /* 继承文字颜色 */
+  display: inline-block; 
+}
+
+
+
+.view-more-container {
+  margin-top: 88px;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+}
+
+
+
+.view-more-website {
+  width: 190px;
+  height: 50px;
+  background-color: #FAE9F2;
+  color: #020202;
+  border: 2px solid #020202;
+  font-family: 'Roboto';
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-align: center;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* 去掉下划线 */
+}
+
+
+.view-more-website:hover{
+  background-color: #FFFFFF;
+  color: #020202;
+  transition: .4s ease;
+
+
+
+}
+
+/* APP */
+
+.mockup-app {
+  display: block;
+  width: auto;         /* 或设具体宽度，比如 80% 或 300px */
+  max-width: 100%;     /* 防止超出 */
+  margin: 30px auto 60px;  /* 上 40，下 60，左右自动居中 */
+  transition: transform 0.4s ease; /* 平滑动画 */
+}
+
+
+.card:hover .mockup-app {
+  transform: scale(1.05); /* 悬浮时放大 5% */
+}
+
+
+.mockup-coming-soon {
+  display: block;
+  width: 270px;         /* 或设具体宽度，比如 80% 或 300px */
+  max-width: 100%;     /* 防止超出 */
+  margin: 60px auto 60px; /* 上 40，下 60，左右自动居中 */
+}
+
+
+.card-link-cafe-app {
+  text-decoration: none;     /* 去掉下划线 */
+  color: inherit;            /* 继承文字颜色 */
+  display: inline-block; 
+}
+
+
+.view-more-app {
+  width: 190px;
+  height: 50px;
+  background-color: #FAE9F2;
+  color: #020202;
+  border: 2px solid #020202;
+  font-family: 'Roboto';
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-align: center;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* 去掉下划线 */
+}
+
+
+.view-more-app:hover{
+  background-color: #FFFFFF;
+  color: #020202;
+  transition: .4s ease;
+
+
+}
+
+/* banner */
+.mockup-banner {
+  display: block;
+  width: 90%;         /* 或设具体宽度，比如 80% 或 300px */
+  max-width: 100%;     /* 防止超出 */
+  margin: 30px auto 60px;  /* 上 40，下 60，左右自动居中 */
+  transition: transform 0.4s ease; /* 平滑动画 */
+}
+
+.card:hover .mockup-banner {
+  transform: scale(1.05); /* 悬浮时放大 5% */
+}
+
+.card-link-cafe-banner {
+  text-decoration: none;     /* 去掉下划线 */
+  color: inherit;            /* 继承文字颜色 */
+  display: inline-block; 
+}
+
+.card-link-hotel-banner {
+  text-decoration: none;     /* 去掉下划线 */
+  color: inherit;            /* 继承文字颜色 */
+  display: inline-block; 
+}
+
+
+.card-link-portfolio-banner {
+  text-decoration: none;     /* 去掉下划线 */
+  color: inherit;            /* 继承文字颜色 */
+  display: inline-block; 
+}
+
+.view-more-banner {
+  width: 190px;
+  height: 50px;
+  background-color: #FAE9F2;
+  color: #020202;
+  border: 2px solid #020202;
+  font-family: 'Roboto';
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-align: center;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* 去掉下划线 */
+}
+
+
+.view-more-banner:hover{
+  background-color: #FFFFFF;
+  color: #020202;
+  transition: .4s ease;
+
+
+}
+
+
+
+/* others */
+
+.card-link-toast-house-others {
+  text-decoration: none;     /* 去掉下划线 */
+  color: inherit;            /* 继承文字颜色 */
+  display: inline-block; 
+}
+
+
+.card-link-koala-others {
+  text-decoration: none;     /* 去掉下划线 */
+  color: inherit;            /* 继承文字颜色 */
+  display: inline-block; 
+}
+
+.card-link-workplace-others {
+  text-decoration: none;     /* 去掉下划线 */
+  color: inherit;            /* 继承文字颜色 */
+  display: inline-block; 
+}
+
+.view-more-others {
+  width: 190px;
+  height: 50px;
+  background-color: #FAE9F2;
+  color: #020202;
+  border: 2px solid #020202;
+  font-family: 'Roboto';
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-align: center;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* 去掉下划线 */
+}
+
+
+.view-more-others:hover{
+  background-color: #FFFFFF;
+  color: #020202;
+  transition: .4s ease;
+
+
+}
+
+
+
+.contact-crossing-banner {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+}
+
+.contact-banner {
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.LP-footer {
+  background-color: #FAE9F2;
+  padding-bottom: 360px;
+  text-align: center;
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.email-box {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 220px;
+}
+
+.email-inner {
+  width: 100%;
+  padding-left: 20.125vw;   /* 322 ÷ 1600 = 20.125% */
+  padding-right: 17.1875vw; /* 275 ÷ 1600 = 17.1875% */
+  box-sizing: border-box;
+}
+
+.email-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-container {
+  position: relative;
+  width: 100%;
+  height: 60px; /* 可根据需要调整总高度 */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 左下角社交图标 */
+.social-icons {
+  position: absolute;
+  left: 60px;
+  bottom: -300px;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 24px;
+}
+
+/* 右下角返回顶部按钮 */
+.back-to-top {
+  position: absolute;
+  right: 60px;
+  bottom: -300px;
+  width: 131px;
+  height: 47px;
+  background-color: #FFFFFF;
+  border: 2px solid #020202;
+  border-radius: 50%;
+
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  letter-spacing: 0.12em; /* 12% */
+  color: #020202;
+  text-align: center;
+  text-decoration: none;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+
+/* 居中导航 */
+.footer-nav {
+  position: absolute;
+  bottom: 136px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 56px;
+  font-size: 24px;
+  position: absolute;
+  bottom: -200px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-nav a {
+  color: #020202;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  transition: 0.4s ease;
+}
+
+/* 居中版权 */
+.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  bottom: -330px;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.16em; /* 16% */
+}
+
+
+
+
+
+.enter-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 148px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #020202;
+  font-family: "Times New Roman", serif;
+  font-size: 24px;
+  text-decoration: none;
+  border: 2px solid #020202;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+
+
+/* 新增：enter button效果 */
+
+.enter-button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease, color 0.3s ease;
+  color: #020202;
+}

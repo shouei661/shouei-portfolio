@@ -1,0 +1,644 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+
+
+.pink-navbar {
+  height: 137px;
+  width: 100%;
+  background-color: #FAE9F2;
+  position: relative;
+  border-bottom: 2px solid #020202;
+  
+}
+
+/* 导航栏 */
+.page-nav {
+  position: absolute;
+  right: 100px;
+  bottom: 32px;
+  display: flex;
+  gap: 56px;
+  font-family: 'Times New Roman', serif;
+  font-size: 24px;
+}
+
+.page-nav a {
+  color: #020202;
+  text-decoration: none;
+  position: relative;
+}
+
+/* hover 时出现下划线 */
+.page-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #020202;
+  transition: width 0.3s ease;
+}
+
+.page-nav a:hover::after {
+  width: 100%;
+}
+
+/* active 状态下划线固定 */
+.page-nav a.active::after {
+  width: 100%;
+}
+
+
+.work-detail-container {
+  padding: 0 150px;
+  margin-top: 72px; /* 或者更大点，例如 150px，确保它在 navbar 下方 */
+}
+
+/* 顶部三栏区域 */
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 96px; /* 高度根据实际行数可调 */
+}
+
+/* 左侧信息 */
+.work-info-left {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+/* 中间标题 */
+.work-title-1 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  margin: 0;
+}
+
+/* 右侧 Next Work */
+.next-work {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+}
+.next-work img {
+  width: 23px;
+  height: 23px;
+}
+
+.next-work-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* 粉色 bar */
+.pink-bar {
+  margin-top: 32px;
+  height: 30px;
+  background-color: #FAE9F2;
+  border: 2px solid #020202;
+}
+
+/* 图片区域 */
+.work-image-wrapper {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.work-image-wrapper img {
+  max-width: 100%;   /* ✅ 图片最大宽度不超过容器 */
+  height: auto;      /* ✅ 按比例缩放高度 */
+  display: block;
+  max-width: 777px;
+}
+
+
+
+
+
+
+.project-detail {
+  margin-top: 72px;
+  font-family: 'Noto Sans JP', sans-serif;
+  max-width: 1096px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.detail-label {
+  font-size: 20px;
+  font-weight: 500;
+  width: 163px;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.detail-content {
+  font-size: 20px;
+  line-height: 1.8;
+  max-width: 893px;
+  margin-left: 16px;
+}
+
+.divider {
+  width: 1096px;
+  height: 2px;
+  background-color: #020202;
+  margin: 16px 0 32px 0;
+}
+
+
+.design-section {
+  background-color: #fff;
+  padding: 96px 0;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.design-pink-area {
+  background-color: #FAE9F2;
+  padding: 0 150px 72px 150px; /* 上内边距给足，让标题浮出一部分 */
+  position: relative;
+  top: 156px;
+}
+
+.design-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; /* 控制间距 */
+  margin-bottom: 64px; /* 与下方图片的间距 */
+  top: -45px;
+}
+
+.design-title {
+  font-size: 72px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+.design-caption {
+  font-size: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.design-line {
+  height: 2px;
+  background-color: #020202;
+
+  /* 宽度稍微比“完成図”长一点，通常“完成図”大约是 90px~100px 左右 */
+  width: 120px;
+}
+
+
+/* 图片区域也在上层 */
+.design-images-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 0 150px;
+  padding-bottom: 200px;
+  box-sizing: border-box;
+}
+
+
+.design-images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 56px;
+  flex-wrap: nowrap;
+  max-width: 1140px; /* 图片 + 间距总宽度限制 */
+  margin: 0 auto;
+}
+
+.design-images img {
+  height: auto;
+  max-height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+/* 限制第一张图最大宽度（不要撑出） */
+.design-images img:first-child {
+  max-width: 783px;
+  width: 100%;
+}
+
+/* 第二张较窄图 */
+.design-images img:last-child {
+  max-width: 306px;
+  width: 100%;
+}
+
+
+
+
+
+.design-header-1 {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; /* 控制间距 */
+  margin-bottom: 64px; /* 与下方图片的间距 */
+  top: 112px;
+}
+
+.design-title-1 {
+  font-size: 72px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+.design-caption-1 {
+  font-size: 24px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.design-line-1 {
+  height: 2px;
+  background-color: #020202;
+
+  /* 宽度稍微比“完成図”长一点，通常“完成図”大约是 90px~100px 左右 */
+  width: 120px;
+}
+
+
+
+
+
+
+/* 外层容器 */
+.work-section {
+  background-color: #fff;
+  padding: 72px 0;
+}
+
+/* 白底黑边框矩形（非全宽） */
+.work-container {
+  border: 2px solid #020202;
+  background-color: #fff;
+  padding: 64px 0;
+  margin: 0 auto;
+  max-width: calc(100% - 312px); /* 保证左右各 156px 空间 */
+  box-sizing: border-box;
+}
+
+/* 标签横排 */
+.category-tags {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 64px 32px 64px;
+}
+
+.tag {
+  flex: 1;
+  margin: 0 8px;
+  text-align: center;
+  padding: 12px 0;
+  border: 2px solid #020202;
+  background-color: #FAE9F2;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #020202;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag.active {
+  background-color: #fff;
+}
+
+/* 横线 */
+.divider-line {
+  width: calc(100% - 128px);
+  height: 2px;
+  background-color: #020202;
+  margin: 0 auto 80px auto;
+}
+
+/* 包含箭头和作品的容器 */
+.work-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 0 64px;
+}
+
+/* 左右箭头 */
+.arrow {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 0 16px;
+}
+
+.left-arrow,
+.right-arrow {
+  margin-top: -50px; /* 数值按需要调整，负值向上 */
+}
+
+/* 网格容器 */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+  flex: 1;
+}
+
+/* 每个作品项 */
+.work-item {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* 粉色方框 */
+.work-box {
+  background-color: #FAE9F2;
+  border: 2px solid #020202;
+  aspect-ratio: 591 / 411;
+  padding: 32px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+/* 图片样式 */
+.work-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* hover 时改变背景色 */
+.work-item:hover .work-box {
+  background-color: #FFFFFF;
+}
+
+/* 文字区 */
+.work-info-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.work-info {
+  display: inline-flex;
+  align-items: center;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.work-year {
+  background-color: #FFFFFF;
+  border: 2px solid #020202;
+  padding: 4px 12px;
+  margin-right: 8px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.work-title {
+  color: #020202;
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+
+
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+/* span 内文字可放大 */
+.tag span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* ✅ 只有不是 active 的标签才启用放大 */
+.tag:not(.active):hover span {
+  transform: scale(1.2);
+}
+
+/* ✅ 点击状态（不放大，只变白） */
+.tag.active {
+  background-color: #FFFFFF;
+}
+
+.tag:first-child { margin-left: 0; }
+.tag:last-child { margin-right: 0; }
+
+.tag.active {
+  background-color: #FFFFFF;
+}
+
+.work-box:hover img {
+  transform: scale(1.06); /* 放大 5% */
+  transition: transform 0.3s ease;
+}
+
+.works-footer {
+  background-color: #FAE9F2;
+  padding-bottom: 360px;
+  text-align: center;
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.email-box {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 220px;
+}
+
+.email-inner {
+  width: 100%;
+  padding-left: 20.125vw;   /* 322 ÷ 1600 = 20.125% */
+  padding-right: 17.1875vw; /* 275 ÷ 1600 = 17.1875% */
+  box-sizing: border-box;
+}
+
+.email-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-container {
+  position: relative;
+  width: 100%;
+  height: 60px; /* 可根据需要调整总高度 */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 左下角社交图标 */
+.social-icons {
+  position: absolute;
+  left: 60px;
+  bottom: -300px;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 24px;
+}
+
+/* 右下角返回顶部按钮 */
+.back-to-top {
+  position: absolute;
+  right: 60px;
+  bottom: -300px;
+  width: 131px;
+  height: 47px;
+  background-color: #FFFFFF;
+  border: 2px solid #020202;
+  border-radius: 50%;
+
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  letter-spacing: 0.12em; /* 12% */
+  color: #020202;
+  text-align: center;
+  text-decoration: none;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+
+.contact-crossing-banner {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+}
+
+.contact-banner {
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+/* 居中导航 */
+.footer-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 56px;
+  font-size: 24px;
+  bottom: -200px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-nav a {
+  color: #020202;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  transition: 0.4s ease;
+}
+
+/* 当前激活页面的链接样式 */
+.footer-nav a.active {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+
+/* 居中版权 */
+.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  bottom: -330px;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.16em; /* 16% */
+}
+
+
+
+@font-face {
+  font-family: 'Times New Roman';
+  src: url('assets1/fonts/TimesNewRoman.woff2') format('woff2'),
+       url('assets1/fonts/TimesNewRoman.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
