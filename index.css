@@ -123,16 +123,6 @@ ul li a:hover{
 
 
 
-.enter-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(14px, 2vw, 24px);
-  color: #020202;
-  pointer-events: none;
-}
-
 .welcome-gif img {
   width: clamp(60px, 10vw, 120px);
   height: auto;
@@ -982,6 +972,7 @@ ul li a:hover{
   overflow: hidden;
   transition: color 0.3s ease;
   z-index: 1;
+  margin-left: -110px;  
 }
 
 
