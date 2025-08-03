@@ -282,9 +282,12 @@ ul li a:hover{
 }
 
 .about-inner {
- display: flex;
-  justify-content: space-between; /* ✅ 消除右侧多余空隙 */
-  gap: 156px; 
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 156px;
 }
 
 /* 左边文字区域 */
