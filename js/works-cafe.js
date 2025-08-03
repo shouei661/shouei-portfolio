@@ -2,7 +2,7 @@ const worksData = {
   all: [
     {
       img: "assets1/works-image/All-hotel-web.png",
-      title: "シオラ海辺の旅館（ＬＰ）",
+      title: "シオラ海辺の旅館サイト",
       year: "2025",
       link: "hotel-web-detail.html"
     },
@@ -56,7 +56,7 @@ const worksData = {
     },
     {
       img: "assets1/works-image/ALL-cafe-web.png",
-      title: "パーノワールカフェ（ＬＰ）",
+      title: "パーノワールカフェサイト",
       year: "2025",
       link: "cafe-web-detail.html"
     }
@@ -64,13 +64,13 @@ const worksData = {
   website: [
     {
       img: "assets1/works-image/ALL-cafe-web.png",
-      title: "パーノワールカフェ（ＬＰ）",
+      title: "パーノワールカフェサイト",
       year: "2025",
       link: "cafe-web-detail.html"
     },
     {
       img: "assets1/works-image/All-hotel-web.png",
-      title: "シオラ海辺の旅館（ＬＰ）",
+      title: "シオラ海辺の旅館サイト",
       year: "2025",
       link: "hotel-web-detail.html"
     },
